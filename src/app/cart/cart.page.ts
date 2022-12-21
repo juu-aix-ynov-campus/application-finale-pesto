@@ -26,7 +26,7 @@ export class CartPage implements OnInit {
   delivery = 5;
   total = 0;
 
-  constructor() { }
+  constructor(private alertController: AlertController) { }
 
   ngOnInit() {
     this.calculateTotal();
@@ -48,7 +48,13 @@ export class CartPage implements OnInit {
     this.total = this.price + this.delivery;
   }
 
-  openPaymentModal() {
+  async openPaymentModal() {
+    const alert = await this.alertController.create({
+      header: 'Paiement non implémenté',
+      message: 'La fonctionnalité de paiement n\'a pas été implémentée car elle ne rentre pas dans le cahier des charges',
+      buttons: ['OK']
+    });
 
+    await alert.present();
   }
 }
