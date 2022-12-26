@@ -5,8 +5,6 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { MessageComponentModule } from '../message/message.module';
 
-import { HomePage } from './home.page';
-
 describe('HomePage', () => {
   let component: HomePage;
   let fixture: ComponentFixture<HomePage>;
@@ -26,7 +24,3 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should add 2+3=5', () => {
-    expect(component.add(2,3)).toBe(5);
-  });
-});
